@@ -1,10 +1,13 @@
 {
-  "version": 2,
   "builds": [
-    { "src": "atelier/asgi.py", "use": "@vercel/python" }
+    {
+      "src": "atelier/wsgi.py",
+      "use": "@vercel/python",
+      "config": { "maxLambdaSize": "50mb" }
+    }
   ],
   "routes": [
-    { "src": "/static/(.*)", "dest": "/web/static/$1" },
-    { "src": "/(.*)", "dest": "atelier/asgi.py" }
+    { "src": "/static/(.*)", "dest": "/staticfiles/$1" },
+    { "src": "/(.*)", "dest": "/atelier/wsgi.py" }
   ]
 }
