@@ -2,12 +2,12 @@
   "builds": [
     {
       "src": "atelier/wsgi.py",
-      "use": "@vercel/python",
-      "config": { "maxLambdaSize": "50mb" }
+      "use": "@vercel/python"
     }
   ],
   "routes": [
     { "src": "/static/(.*)", "dest": "/staticfiles/$1" },
     { "src": "/(.*)", "dest": "/atelier/wsgi.py" }
-  ]
+  ],
+  "buildCommand": "pip install -r requirements.txt && python manage.py collectstatic --noinput"
 }
