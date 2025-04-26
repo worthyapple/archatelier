@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "atelier/asgi.py", "use": "@vercel/python" }
+  ],
+  "routes": [
+    { "src": "/static/(.*)", "dest": "/web/static/$1" },
+    { "src": "/(.*)", "dest": "atelier/asgi.py" }
+  ]
+}
