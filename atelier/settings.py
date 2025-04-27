@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-!x21hl12u9i$@ujuymn1u+v04=$ig&16@y!5gjxl&=9q0l%@d3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['archatelier.onrender.com','thearchatelier.in','www.thearchatelier.in"']
 
 
 # Application definition
@@ -128,6 +128,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 CSRF_TRUSTED_ORIGINS = [
     "https://archatelier.onrender.com",
+    "https://www.thearchatelier.in",
 ]
 
 
