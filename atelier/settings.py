@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-!x21hl12u9i$@ujuymn1u+v04=$ig&16@y!5gjxl&=9q0l%@d3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -125,6 +125,10 @@ STATICFILES_DIRS = [BASE_DIR / 'web/static']
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://archatelier.onrender.com",
+]
 
 
 # Default primary key field type
